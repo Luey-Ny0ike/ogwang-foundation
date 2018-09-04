@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   root to: "home#index"
   get '/about', to: 'home#about'
   resources :article_categories
