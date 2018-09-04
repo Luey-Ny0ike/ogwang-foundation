@@ -16,6 +16,10 @@
     <%= form.text_field :title, id: :project_title %>
   </div>
 
+<div class="feild">
+  <%= form.label :Project_Category%>
+   <%= collection_select(:project, :project_category_id, ProjectCategory.all, :id, :name_with_state) %>
+</div>
   <div class="field">
     <%= form.label :description %>
     <%= form.text_area :description, id: :project_description %>
