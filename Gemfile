@@ -52,3 +52,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "paperclip", "~> 6.0.0"
 gem 'ckeditor'
 gem 'devise'
+gem 'toastr-rails'
