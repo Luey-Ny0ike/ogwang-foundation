@@ -16,3 +16,40 @@
  */
 
 @import "bootstrap";
+
+.big-logo{
+  background-color: white;
+  text-align: center;
+  margin: 0 auto;
+  margin: -40px;
+  #big-l{
+    height: 225px;
+    width: 312px;
+  }
+}
+
+.navba-content{
+  float: right;
+}
+nav {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    float: none;
+    list-style: none;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    margin-left: 0px;  // looks like bootstrap is putting a left margin on your #nav you may want it off.
+
+}
+nav li {
+   display: inline-block;
+   text-align:center;
+}
+.carousel{
+  text-align: center;
+  padding: 130px;
+  background-color: #dedfe0;
+}
