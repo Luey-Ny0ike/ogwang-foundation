@@ -28,9 +28,6 @@
   }
 }
 
-.navba-content{
-  float: right;
-}
 nav {
     width: 100%;
     display: inline-block;
@@ -38,11 +35,20 @@ nav {
     padding: 0;
     float: none;
     list-style: none;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     border-bottom: 1px solid #ccc;
     border-top: 1px solid #ccc;
     margin-left: 0px;  // looks like bootstrap is putting a left margin on your #nav you may want it off.
-
+.nav-link{
+  color: black !important;
+}
+.nav-link:hover{
+  color: green !important;
+}
+.vf{
+  padding-left: 10px;
+  padding-right: 10px;
+}
 }
 nav li {
    display: inline-block;
