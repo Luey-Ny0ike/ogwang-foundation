@@ -20,6 +20,11 @@
   <%= form.label :Project_Category%>
    <%= collection_select(:project, :project_category_id, ProjectCategory.all, :id, :name_with_state) %>
 </div>
+
+<div class="feild">
+  <%= form.label :cover_photo %>
+  <%= form.file_field :cover_photo %>
+</div>
   <div class="field">
     <%= form.label :description %>
     <%= form.cktext_area :description, id: :project_description %>
