@@ -41,26 +41,53 @@
   </nav>
 
   <div class="carousel">
-    The courousel will go here
-  </div>
+    <div id="container">
+			<div id="next" alt="Next" title="Next">
+				<div class="arrow-right"></div>
+			</div>
+			<div id="prev" alt="Prev" title="Prev">
+				<div class="arrow-left"></div>
+			</div>
+			<div id="slider">
+				<div class="slide">
+					<div class="slide-copy">
+						<h2>Slide One</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae commodo sem. Integer eros nibh, molestie congue elementum quis, mattis nec tortor. Vivamus sed hendrerit sed vitae orci convallis.</p>
+					</div>
+					<div class="img1"></div>
+				</div>
 
-  <div class="projects">
-    <h1 class="main-heading">Projects</h1>
-    <% if @projects.any? %>
-    <% @projects.each do |project|%>
-    <div class="col-md-4 col-sm-6 col-xs-6 cardo">
-      <div class="image-main">
-        <%= link_to project_path(project), id:"link" do %>
-        <%= image_tag project.cover_photo.url(:large), class:"img-responsive", id:"image-boki"%>
-        <% end %>
-      </div>
-      <div class="container content">
-        <%= link_to project_path(project), id:"link" do %>
-        <h4 id="project-title"><%= project.title %></h4>
-        <% end %>
-        <% end %>
-      <% else %>
-        <span id="stay">No projects yet.</span><br>
-        <% end %>
-      </div>
-    </div>
+				<div class="slide">
+					<div class="slide-copy">
+						<h2>Slide Two</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae commodo sem. Integer eros nibh, molestie congue elementum quis, mattis nec tortor. Vivamus sed hendrerit sed vitae orci convallis.</p>
+					</div>
+					<div class="img2"></div>
+				</div>
+
+				<div class="slide">
+					<div class="slide-copy">
+						<h2>Slide Three</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae commodo sem. Integer eros nibh, molestie congue elementum quis, mattis nec tortor. Vivamus sed hendrerit sed vitae orci convallis.</p>
+					</div>
+					<div class="img3"></div>
+				</div>
+
+				<div class="slide">
+					<div class="slide-copy">
+						<h2>Slide Four</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae commodo sem. Integer eros nibh, molestie congue elementum quis, mattis nec tortor. Vivamus sed hendrerit sed vitae orci convallis.</p>
+					</div>
+					<div class="img4"></div>
+				</div>
+
+				<div class="slide">
+					<div class="slide-copy">
+						<h2>Slide Five</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae commodo sem. Integer eros nibh, molestie congue elementum quis, mattis nec tortor. Vivamus sed hendrerit sed vitae orci convallis.</p>
+					</div>
+					<div class="img5"></div>
+				</div>
+			</div>
+		</div>
+  </div>

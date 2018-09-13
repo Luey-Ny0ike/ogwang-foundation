@@ -55,7 +55,147 @@ nav li {
    text-align:center;
 }
 .carousel{
-  text-align: center;
-  padding: 130px;
-  background-color: #dedfe0;
+  #slider{
+  	width:100%;
+  	height:450px;
+  	position:relative;
+  	overflow:hidden;
+  	float:left;
+  	padding:0;
+  }
+
+  #slider img{
+  	width:940px;
+  	height:350px;
+  }
+
+  .img1, .img2, .img3, .img4, .img5 {
+  	width:100%;
+  	margin:0;
+  	padding:0;
+  }
+
+
+  .slide{
+  	position:absolute;
+  	width:100%;
+  	height:100%;
+  }
+  .slide:nth-child(1){
+  	background:#ce6868;
+  }
+
+  .slide:nth-child(2){
+  	background:#9ab6b6;
+  }
+
+  .slide:nth-child(3){
+  	background:#98cc98;
+  }
+
+  .slide:nth-child(4){
+  	background:#e7b892;
+  }
+
+  .slide:nth-child(5){
+  	background:#c4ad43;
+  }
+
+
+  .slide-copy{
+  	position:absolute;
+  	bottom:0;
+  	left:0;
+  	padding:10px 20px 20px 20px;
+  	background:7f7f7f;
+  	background: rgba(0,0,0,0.5);
+  	width:100%;
+  	max-height:32%;
+  }
+
+  #prev, #next{
+  	cursor:pointer;
+  	z-index:100;
+  	background:#666;
+  	height:50px;
+  	width:50px;
+  	display:inline-block;
+  	position:relative;
+  	top:197px;
+  	margin:0;
+  	padding:0;
+  	opacity:0.7;
+  	filter: alpha(opacity=70);
+  }
+
+  #next{
+  	float:right;
+  	right:-2px;
+  }
+
+  #prev{
+  	float:left;
+  	left:0;
+  }
+
+  .arrow-right {
+  	width: 0;
+  	height: 0;
+  	border-top: 15px solid transparent;
+  	border-bottom: 15px solid transparent;
+  	border-left: 15px solid #fff;
+  	position:relative;
+  	top:20%;
+  	right:-40%;
+  }
+
+  .arrow-left {
+  	width: 0;
+  	height: 0;
+  	border-top: 15px solid transparent;
+  	border-bottom: 15px solid transparent;
+  	border-right:15px solid #fff;
+  	position:relative;
+  	top:20%;
+  	left:30%;
+  }
+}
+
+.projects{
+  .main-heading{
+    padding-top: 25px;
+    text-align: center;
+  }
+}
+
+.cardo {
+  border: 1px solid transparent;
+  padding: 2px;
+  background: white;
+  margin-bottom: 5px;
+  .image-main {
+    padding-left: 0;
+    padding-right: 0;
+    height: 308px;
+  }
+
+  .content {
+    padding-top: 4px;
+    height: auto;
+
+    #project-title {
+      font-family: 'Lora', serif;
+      margin-bottom: 2px;
+    }
+    #project-category{
+      color: grey;
+      font-size: 12px;
+      font-family: 'Rokkitt', serif;
+    }
+  }
+}
+
+#link{
+  color: inherit;
+  text-decoration: none;
 }
