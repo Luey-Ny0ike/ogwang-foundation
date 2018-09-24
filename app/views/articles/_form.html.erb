@@ -16,6 +16,11 @@
     <%= form.text_field :title, id: :article_title %>
   </div>
 
+  <div class="feild">
+    <%= form.label :cover_photo %>
+    <%= form.file_field :cover_photo %>
+  </div>
+  
   <div class="field">
     <%= form.label :description %>
     <%= form.cktext_area :description, id: :article_description %>
