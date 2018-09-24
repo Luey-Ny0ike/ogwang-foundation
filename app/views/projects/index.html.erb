@@ -9,12 +9,14 @@
 
     <div class="container actual-projects">
       <% @projects.each do |project| %>
+      <%= link_to project_path(project), id:"link" do %>
       <h3 class="project-title"><%= project.title %></h3>
       <p class="project-description"><%= project.description.first(500).html_safe %></p>
 
       <div class="project-image">
         <%= image_tag project.cover_photo.url(:background), class:"img-fluid"%>
       </div>
+      <% end %>
       <hr>
       <% end %>
       <h3 class="project-title">The Titanic Scenario</h3>
