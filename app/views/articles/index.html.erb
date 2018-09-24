@@ -1,29 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div class="articles-section">
+  <div class="grids">
+    <br><br>
+    <div class="centered-text col-md-12">
+      <h2 id="msee">
+        <span>ARTICLES</span>
+      </h2>
+    </div>
 
-<h1>Articles</h1>
+    <div class="container actual-articles">
+      <% @articles.each do |article| %>
+      <%= link_to article_path(article), id:"link" do %>
+      <h3 class="article-title"><%= article.title %></h3>
+      <p class="article-description"><%= article.description.first(500).html_safe %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <div class="article-image">
+        <%= image_tag article.cover_photo.url(:background), class:"img-fluid"%>
+      </div>
+      <% end %>
+      <hr>
+      <% end %>
+      <h3 class="article-title">The Titanic Scenario</h3>
+      <p class="article-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.description %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Article', new_article_path %>
+      <div class="vitu-zako"></div>
+      <hr>
+    </div>
+  </div>
+</div>
