@@ -1,14 +1,6 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<div class="projects-section"><br><br>
+  <h1 id="project-header"><%= @project.title %></h1>
+  <div class="content">
+    <%= @project.description.html_safe%>
+  </div>
+</div>
