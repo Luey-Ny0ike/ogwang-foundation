@@ -11,7 +11,7 @@
       <% @articles.each do |article| %>
       <%= link_to article_path(article), id:"link" do %>
       <h3 class="article-title"><%= article.title %></h3>
-      <p class="article-description"><%= article.description.first(500).html_safe %></p>
+      <div id="p"><%= article.description.first(500).html_safe %><%= link_to '...Read more', article_path(article)%></div>
 
       <div class="article-image">
         <%= image_tag article.cover_photo.url(:background), class:"img-fluid"%>
