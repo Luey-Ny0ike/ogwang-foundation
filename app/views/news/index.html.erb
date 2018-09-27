@@ -1,29 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div class="news-section">
+  <div class="grids">
+    <br><br>
+    <div class="centered-text col-md-12">
+      <h2 id="msee">
+        <span>NEWS</span>
+      </h2>
+    </div>
 
-<h1>News</h1>
+    <div class="container actual-news">
+      <% @news.each do |news| %>
+      <%= link_to news_path(news), id:"link" do %>
+      <h3 class="news-title"><%= news.title %></h3>
+      <div id="p"><%= news.description.first(500).html_safe %><%= link_to '...Read more', news_path(news)%></div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <div class="news-image">
+        <%= image_tag news.cover_photo.url(:background), class:"img-fluid"%>
+      </div>
+      <% end %>
+      <hr>
+      <% end %>
+      <h3 class="news-title">The Titanic Scenario</h3>
+      <p class="news-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-  <tbody>
-    <% @news.each do |news| %>
-      <tr>
-        <td><%= news.title %></td>
-        <td><%= news.description %></td>
-        <td><%= link_to 'Show', news %></td>
-        <td><%= link_to 'Edit', edit_news_path(news) %></td>
-        <td><%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New News', new_news_path %>
+      <div class="vitu-zako"></div>
+      <hr>
+    </div>
+  </div>
+</div>
