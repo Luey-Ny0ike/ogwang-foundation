@@ -23,3 +23,29 @@
     }
   }
 }
+
+@media screen and (max-width: 1167px) {
+  .news-section{
+    width: 60%;
+  }
+}
+@media screen and (max-width: 929px) {
+  .news-section{
+    width: 70%;
+  }
+}
+@media screen and (max-width: 628px) {
+  .news-section{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .news-section{
+    width: 90%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .news-section{
+    width: 95%;
+  }
+}

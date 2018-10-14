@@ -19,3 +19,29 @@
     }
   }
 }
+
+@media screen and (max-width: 1167px) {
+  .articles-section{
+    width: 60%;
+  }
+}
+@media screen and (max-width: 929px) {
+  .articles-section{
+    width: 70%;
+  }
+}
+@media screen and (max-width: 628px) {
+  .articles-section{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .articles-section{
+    width: 90%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .articles-section{
+    width: 95%;
+  }
+}

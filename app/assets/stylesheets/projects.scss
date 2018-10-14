@@ -19,3 +19,30 @@
     }
   }
 }
+
+// MEDIA QUERIES
+@media screen and (max-width: 1167px) {
+  .projects-section{
+    width: 60%;
+  }
+}
+@media screen and (max-width: 929px) {
+  .projects-section{
+    width: 70%;
+  }
+}
+@media screen and (max-width: 628px) {
+  .projects-section{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .projects-section{
+    width: 90%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .projects-section{
+    width: 95%;
+  }
+}
