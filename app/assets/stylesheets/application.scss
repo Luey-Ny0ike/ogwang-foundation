@@ -83,6 +83,30 @@ nav li {
   height: 550px;
 }
 
+.one {
+  background-image: url('07.jpg');
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.two {
+  background-image: url('21.jpg');
+  background-position: top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.three {
+  background-image: url('1001.jpg');
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
 .projects {
   .main-heading {
     padding-top: 25px;
