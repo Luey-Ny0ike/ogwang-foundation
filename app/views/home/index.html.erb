@@ -39,22 +39,18 @@
         </h2>
       </div>
       <!-- The start of the grid -->
+      <% @news.each do |news| %>
       <div class="col-md-4 col-sm-6 col-xs-12">
         <!-- content that is above the text on the grid -->
-        <div class="vitu-zako"></div>
-        <p>Resize the browser window to see the effect.</p>
+        <%= link_to news_path(news), id:"link" do %>
+        <div class="home-image">
+        <%= image_tag news.cover_photo(:large), class:"img-fluid", id:"image-main" %>
+        </div><br>
+        <h4><%= news.title %></h4>
+        <% end %>
       </div>
-
-      <div class="col-sm-4 col-xs-12">
-        <div class="vitu-zako"></div>
-        <p>Resize the browser window to see the effect.</p>
-      </div>
-
-      <div class="col-sm-4 col-xs-12">
-        <div class="vitu-zako"></div>
-        <p>Resize the browser window to see the effect.</p><br>
-      </div>
-      <button type="button" class="btn view-more">View More</button>
+      <% end %>
+      <a href="/news" class="btn view-more">View More</a>
     </div>
     <br>
     <!-- The second grid -->
