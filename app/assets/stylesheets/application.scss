@@ -37,7 +37,6 @@ body {
   }
 }
 
-
 nav {
   width: 100%;
   display: inline-block;
@@ -168,6 +167,18 @@ nav li {
     border: 2px solid transparent;
     padding: 100px;
   }
+
+  .home-image {
+    width: 100%;
+    height: auto;
+    padding: 0;
+
+    #image-main {
+      height: 307px;
+      width: 452px;
+    }
+  }
+
   .view-more {
     text-align: center;
     margin: auto;
@@ -177,7 +188,8 @@ nav li {
     color: green;
     border: 2px solid green;
   }
-  .view-more:hover{
+
+  .view-more:hover {
     background-color: green;
     color: white;
   }
@@ -202,7 +214,6 @@ nav li {
     padding: 5px;
   }
 }
-
 // MEDIA QUERIES
 @media only screen and (max-width: 1000px) {
   .big-logo {
