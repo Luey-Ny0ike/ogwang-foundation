@@ -58,9 +58,11 @@ nav {
     color: green !important;
   }
 
-  .vf {
-    padding-left: 10px;
-    padding-right: 10px;
+  .vf{
+    width: auto;
+  }
+  .navbar-brand{
+    margin-left: 10px;
   }
 }
 
@@ -69,6 +71,14 @@ nav li {
   text-align: center;
 }
 
+@media screen and (max-width: 992px) {
+  nav li{
+    text-align: left;
+  }
+  .vf{
+    padding-left: 10px;
+  }
+}
 .carousel-item {
   height: 550px;
 }
