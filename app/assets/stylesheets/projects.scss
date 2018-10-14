@@ -19,6 +19,14 @@
     }
   }
 }
+.background-projects{
+  background-color: grey;
+  .projects-sectiona{
+    background-color: white;
+    width: 75%;
+    margin: 0 auto;
+  }
+}
 
 // MEDIA QUERIES
 @media screen and (max-width: 1167px) {
@@ -35,14 +43,29 @@
   .projects-section{
     width: 80%;
   }
+  .background-projects{
+    .projects-sectiona{
+      width: 90%;
+    }
+  }
 }
 @media screen and (max-width: 550px) {
   .projects-section{
     width: 90%;
   }
+  .background-projects{
+    .projects-sectiona{
+      width: 95%;
+    }
+  }
 }
 @media screen and (max-width: 400px) {
   .projects-section{
     width: 95%;
+  }
+  .background-projects{
+    .projects-sectiona{
+      width: 100%;
+    }
   }
 }

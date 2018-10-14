@@ -23,6 +23,14 @@
     }
   }
 }
+.background-news{
+  background-color: grey;
+  .news-sectiona{
+    background-color: white;
+    width: 75%;
+    margin: 0 auto;
+  }
+}
 
 @media screen and (max-width: 1167px) {
   .news-section{
@@ -38,14 +46,29 @@
   .news-section{
     width: 80%;
   }
+  .background-news{
+    .news-sectiona{
+      width: 90%;
+    }
+  }
 }
 @media screen and (max-width: 550px) {
   .news-section{
     width: 90%;
   }
+  .background-news{
+    .news-sectiona{
+      width: 95%;
+    }
+  }
 }
 @media screen and (max-width: 400px) {
   .news-section{
     width: 95%;
+  }
+  .background-news{
+    .news-sectiona{
+      width: 100%;
+    }
   }
 }

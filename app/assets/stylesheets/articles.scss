@@ -19,6 +19,14 @@
     }
   }
 }
+.background-articles{
+  background-color: grey;
+  .articles-sectiona{
+    background-color: white;
+    width: 75%;
+    margin: 0 auto;
+  }
+}
 
 @media screen and (max-width: 1167px) {
   .articles-section{
@@ -34,14 +42,29 @@
   .articles-section{
     width: 80%;
   }
+  .background-articles{
+    .articles-sectiona{
+      width: 90%;
+    }
+  }
 }
 @media screen and (max-width: 550px) {
   .articles-section{
     width: 90%;
   }
+  .background-articles{
+    .articles-sectiona{
+      width: 95%;
+    }
+  }
 }
 @media screen and (max-width: 400px) {
   .articles-section{
     width: 95%;
+  }
+  .background-articles{
+    .articles-sectiona{
+      width: 100%;
+    }
   }
 }
