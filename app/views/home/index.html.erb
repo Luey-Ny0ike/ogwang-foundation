@@ -39,7 +39,7 @@
         </h2>
       </div>
       <!-- The start of the grid -->
-      <div class="col-sm-4 col-xs-12">
+      <div class="col-md-4 col-sm-6 col-xs-12">
         <!-- content that is above the text on the grid -->
         <div class="vitu-zako"></div>
         <p>Resize the browser window to see the effect.</p>
@@ -67,23 +67,18 @@
           <span>PROJECTS</span>
         </h2>
       </div>
+      <% @projects.each do |project| %>
       <!-- The start of the grid -->
-      <div class="col-sm-4 col-xs-12">
+      <div class="col-md-4 col-sm-6 col-xs-12">
         <!-- content that is above the text on the grid -->
-        <div class="vitu-zako"></div>
-        <p>Resize the browser window to see the effect.</p>
+        <%= link_to project_path(project), id:"link" do %>
+        <div class="home-image">
+            <%= image_tag project.cover_photo(:large), class:"img-fluid", id:"image-main" %>
+        </div><br>
+        <h4><%= project.title %></h4>
+        <% end %>
       </div>
-
-      <div class="col-sm-4 col-xs-12">
-        <div class="vitu-zako"></div>
-        <p>Resize the browser window to see the effect.</p>
-      </div>
-
-      <div class="col-sm-4 col-xs-12">
-        <div class="vitu-zako"></div>
-        <p>Resize the browser window to see the effect.</p><br>
-      </div>
-
+      <% end %>
       <a href="/projects" class="btn view-more">View More</a>
     </div>
     <br>
@@ -97,22 +92,18 @@
           <span>ARTICLES</span>
         </h2>
       </div>
+      <% @articles.each do |article| %>
       <!-- The start of the grid -->
-      <div class="col-sm-4 col-xs-12">
-        <!-- content that is above the text on the grid -->
-        <div class="vitu-zako"></div>
-        <p>Resize the browser window to see the effect.</p>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <%= link_to article_path(article), id:"link" do %>
+        <div class="home-image">
+            <%= image_tag article.cover_photo(:large), class:"img-fluid", id:"image-main" %>
+        </div><br>
+        <h4><%= article.title %></h4>
+        <% end %>
       </div>
+      <% end %>
 
-      <div class="col-sm-4 col-xs-12">
-        <div class="vitu-zako"></div>
-        <p>Resize the browser window to see the effect.</p>
-      </div>
-
-      <div class="col-sm-4 col-xs-12">
-        <div class="vitu-zako"></div>
-        <p>Resize the browser window to see the effect.</p><br>
-      </div>
       <a href="/articles" class="btn view-more">View More</a>
     </div>
     <!-- The end you can add footer after this -->
