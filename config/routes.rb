@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :news
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   mount Ckeditor::Engine => '/ckeditor'
   root to: "home#index"
   get '/about', to: 'home#about'
