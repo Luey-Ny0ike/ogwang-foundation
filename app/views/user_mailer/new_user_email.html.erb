@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>Hello Ben, <%= @user.first_name %> <%= @user.last_name %>, has registered to be a Concerned Scholarly Writer(CSW).
+      This is their email <%= @user.email %>.
+    </p>
+    <p>Follow this link to check out their application <%= link_to 'Here', 'http://localhost:3000/admin/user'%></p>
+  </body>
+</html>
