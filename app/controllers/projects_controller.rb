@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
+  before_action :authenticate_user_custom, only: [:new, :edit, :update, :destroy]
 
   # GET /projects
   # GET /projects.json
@@ -62,6 +62,11 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def authenticate_user_custom
+    unless user_signed_in? && current_user.superadmin_role == true
+      redirect_to projects_path, alert: 'You are not authorised to view this page'
+    end
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project

@@ -1,5 +1,6 @@
 class NewsController < ApplicationController
   before_action :set_news, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user_custom, only: [:new, :edit, :update, :destroy]
 
   # GET /news
   # GET /news.json
@@ -58,6 +59,12 @@ class NewsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to news_index_url, notice: 'News was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def authenticate_user_custom
+    unless user_signed_in? && current_user.superadmin_role == true
+      redirect_to news_index_path, alert: 'You are not authorised to view this page'
     end
   end
 
