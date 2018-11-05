@@ -6,9 +6,9 @@ class UserMailer < ApplicationMailer
 
   def new_user_email
     @user = params[:user]
-    mail(to: 'nyoikelewis@gmail.com', subject: 'New user has registered')
+    mail(to: 'benowino7@gmail.com', subject: 'New user has registered')
   end
-  
+
   def acceptance_email
     @user = params[:user]
     mail(to: @user.email, subject: 'Your application was successfull')
