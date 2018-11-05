@@ -1,11 +1,12 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
+  before_action :authenticate_user_custom, only: [:new, :edit, :update, :destroy]
 
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @articles = Article.where(approved: true)
   end
 
   # GET /articles/1
@@ -62,6 +63,14 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def authenticate_user_custom
+    if user_signed_in? && current_user.approved == nil
+      redirect_to articles_path, notice: 'Your request to be a writer is still being processed for approval'
+    elsif user_signed_in? && current_user.approved == false
+      redirect_to articles_path, alert: 'Your request to be a writer was not approved'
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_article
@@ -70,6 +79,6 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :description, :cover_photo)
+      params.require(:article).permit(:title, :description, :cover_photo, :approved)
     end
 end
