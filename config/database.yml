@@ -15,11 +15,14 @@
 # gem 'pg'
 #
 default: &default
-  adapter: postgresql
-  encoding: unicode
+  adapter: mysql2
+  encoding: utf8
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password: lewis
+  socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
@@ -80,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: owang-foundation_production
-  username: owang-foundation
-  password: <%= ENV['OWANG-FOUNDATION_DATABASE_PASSWORD'] %>
+  database: ogwang_foundation_production
+  username: root
+  password: iambatman74&
