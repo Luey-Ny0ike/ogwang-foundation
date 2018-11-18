@@ -83,7 +83,7 @@ nav li {
 }
 
 .one {
-  background-image: url(/assets/first.jpg);
+  background-image: url(<%= asset_path 'first.jpg' %>);
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -99,7 +99,7 @@ nav li {
 }
 
 .three {
-  background-image: url('third.jpg');
+  background-image: url(<%= asset_path 'third.jpg' %>);
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
