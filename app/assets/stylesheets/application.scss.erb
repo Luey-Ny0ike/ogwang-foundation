@@ -83,11 +83,16 @@ nav li {
 }
 
 .one {
-  background-image: url(<%= asset_path 'first.jpg' %>);
+  background-image: url(<%= asset_path '7.jpg' %>);
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+}
+@media only screen and (max-width: 320px) {
+  .one{
+    background-image: url(<%= asset_path 'first.jpg' %>);
+  }
 }
 
 .two {
