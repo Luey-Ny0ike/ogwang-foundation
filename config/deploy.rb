@@ -3,7 +3,7 @@ server '18.219.16.149', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:Luey-Ny0ike/ogwang-foundation.git'
 set :application,     'ogwang-foundation'
-set :user,            'deploy'
+set :user,            'ubuntu'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
