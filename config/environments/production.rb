@@ -81,6 +81,18 @@ Rails.application.configure do
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
 
+  # for s3 storage
+    config.paperclip_defaults = {
+    storage: :s3,
+    s3_host_name: "s3-us-east-2.amazonaws.com",
+    s3_region: 'us-west-2',
+    s3_credentials: {
+      bucket: ENV.fetch('S3_BUCKET_NAME'),
+      access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
+      secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY')
+    }
+  }
+
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
