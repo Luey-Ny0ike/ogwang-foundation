@@ -84,11 +84,11 @@ Rails.application.configure do
   # for s3 storage
     config.paperclip_defaults = {
     storage: :s3,
-    s3_region: 'us-west-2',
+    s3_region: 'us-east-1',
     s3_credentials: {
-      bucket: 'test',
-      access_key_id: 'test',
-      secret_access_key: 'test'
+      bucket: 'ogwang-foundation-production',
+      access_key_id: 'AKIA5VKLMNTIRO2COVBK',
+      secret_access_key: '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'
     }
   }
 
