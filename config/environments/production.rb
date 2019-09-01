@@ -82,15 +82,15 @@ Rails.application.configure do
   config.i18n.fallbacks = true
 
   # for s3 storage
-    config.paperclip_defaults = {
-    storage: :s3,
-    s3_region: 'us-east-1',
-    s3_credentials: {
-      bucket: 'ogwang-foundation-production',
-      access_key_id: 'AKIA5VKLMNTIRO2COVBK',
-      secret_access_key: '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'
-    }
+  config.paperclip_defaults = {
+  storage: :s3,
+  s3_region: 'us-east-1',
+  s3_credentials: {
+    bucket: ENV["BUCKET"],
+    access_key_id: ENV["ACCESS_KEY_ID"],
+    secret_access_key: ENV["SECRET_ACCESS_KEY"]
   }
+}
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify

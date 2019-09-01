@@ -56,6 +56,16 @@ Rails.application.configure do
     authentication:       'plain',
     enable_starttls_auto: true }
   # Raises error for missing translations
+  # for s3 storage
+    config.paperclip_defaults = {
+    storage: :s3,
+    s3_region: 'us-east-1',
+    s3_credentials: {
+      bucket: ENV["BUCKET"],
+      access_key_id: ENV["ACCESS_KEY_ID"],
+      secret_access_key: ENV["SECRET_ACCESS_KEY"]
+    }
+  }
   # config.action_view.raise_on_missing_translations = true
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
