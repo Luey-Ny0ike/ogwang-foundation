@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20181105141334) do
     t.string "cover_photo_content_type"
     t.integer "cover_photo_file_size"
     t.datetime "cover_photo_updated_at"
-    t.boolean "approved"
+    t.boolean "approved", default: false
   end
 
   create_table "ckeditor_assets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(version: 20181105141334) do
     t.text "about"
     t.string "gender"
     t.string "dob"
-    t.boolean "approved"
+    t.boolean "approved", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
