@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   get 'users/:id', to: "users#show", as: "user"
   get 'users/:id/edit', to: "users#edit", as: "edit_user"
   patch 'users/:id', to: "users#update"
+  get 'users/:id/approve', to:"users#approve", as:"approve"
+  get 'users/:id/disapprove', to:"users#disapprove", as:"disapprove"
 end
