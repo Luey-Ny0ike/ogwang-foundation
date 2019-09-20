@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181105141334) do
+ActiveRecord::Schema.define(version: 20190920091657) do
 
   create_table "article_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20181105141334) do
     t.integer "cover_photo_file_size"
     t.datetime "cover_photo_updated_at"
     t.boolean "approved", default: false
+    t.integer "user_id"
   end
 
   create_table "ckeditor_assets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -96,6 +97,7 @@ ActiveRecord::Schema.define(version: 20181105141334) do
     t.string "gender"
     t.string "dob"
     t.boolean "approved"
+    t.boolean "free_pass"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
