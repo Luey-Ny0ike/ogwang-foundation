@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
   </head>
   <body>
-    <p>Hello Ben, <%= @user.first_name %> <%= @user.last_name %>, has registered to be a Concerned Scholarly Writer(CSW).
-      This is their email <%= @user.email %>.
+    <p>Hello Ben,
+      <%= @user.first_name %>
+      <%= @user.last_name %>, has registered to be a Concerned Scholarly Writer(CSW). This is their email
+      <%= @user.email %>, and here are their details:
     </p>
-    <p>Follow this link to check out their application <%= link_to 'Here', 'http://localhost:3000/admin/user'%></p>
-  </body>
+
+    <form class="">
+      <h3>PERSONAL DETAILS</h3>
+      <label for="">First Name</label><br>
+      <input type="text" name="" value="<%= @user.first_name%>" readonly="readonly"><br>
+      <label for="">Last Name</label><br>
+      <input type="text" name="" value="<%= @user.last_name%>" readonly="readonly"><br>
+      <label for="">Institution</label><br>
+      <input type="text" name="" value="<%= @user.institution%>" readonly="readonly"><br>
+      <label for="">Gender</label><br>
+      <input type="text" name="" value="<%= @user.gender%>" readonly="readonly"><br>
+      <label for="">Id number</label><br>
+      <input type="text" name="" value="<%= @user.id_number%>" readonly="readonly"><br>
+      <label for="">Tell us something about yourself in relation to Africa</label><br>
+      <textarea name="name" rows="8" cols="80" readonly="readonly"><%= @user.about%></textarea><br>
+    </form>
+
+    <%= link_to approve_url(@user) do %>
+    <button type="button" name="button">Approve</button>
+  <% end %>
+
+  <%= link_to disapprove_url(@user) do %>
+  <button type="button" name="button">Disapprove</button>
+<% end %>
+</body>
 </html>
