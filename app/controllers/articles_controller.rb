@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/new
   def new
-    @article = Article.new
+    @article = current_user.articles.build
   end
 
   # GET /articles/1/edit
@@ -26,7 +26,7 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
-    @article = Article.new(article_params)
+    @article = current_user.articles.build(article_params)
 
     respond_to do |format|
       if @article.save
@@ -35,6 +35,10 @@ class ArticlesController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @article.errors, status: :unprocessable_entity }
+      end
+
+      if @article.user.free_pass == true
+        @article.update(approved: true)
       end
     end
   end
