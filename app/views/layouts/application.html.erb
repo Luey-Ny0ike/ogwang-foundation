@@ -24,9 +24,9 @@
 <div class="big-logo">
   <%= image_tag '13.gif', id: "big-l"%>
 </div>
-<div class="row">
+<div class="row" id="navbar">
   <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="/">OGWANG</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="/"><span id="brand-word">OGWANG</span> <span id="lgo"><%= image_tag '13.gif', id: "small-l"%></span></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -50,6 +50,8 @@
     </div>
   </nav>
   </div>
+  <div class="content">
+
     <%= yield %>
 
     <!-- Footer -->
@@ -145,5 +147,20 @@
 
   </footer>
   <!-- Footer -->
+</div>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
   </body>
 </html>
