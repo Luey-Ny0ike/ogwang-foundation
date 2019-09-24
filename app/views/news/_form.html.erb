@@ -11,22 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field col-md-8">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :news_title %>
+    <%= form.text_field :title, id: :news_title, class:"form-control" %>
   </div>
 
-  <div class="feild">
+  <div class="feild col-md-8">
     <%= form.label :cover_photo %>
-    <%= form.file_field :cover_photo %>
+    <%= form.file_field :cover_photo, class:"form-control" %>
   </div>
-  
-  <div class="field">
+
+  <div class="field col-md-8">
     <%= form.label :description %>
     <%= form.cktext_area :description, id: :news_description %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions col-md-12">
+    <br><%= form.submit %>
   </div>
 <% end %>
