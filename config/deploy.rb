@@ -1,5 +1,5 @@
 # Change these
-server '18.219.16.149', port: 22, roles: [:web, :app, :db], primary: true
+server '18.219.190.154', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:Luey-Ny0ike/ogwang-foundation.git'
 set :application,     'ogwang-foundation'
